@@ -84,11 +84,6 @@ Add the MCP server to your client's MCP configuration:
 
 Replace `/path/to/pmind-playwright-mcp` with the actual path where you cloned the repository.
 
-#### For Claude Desktop
-
-On macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
-
 #### For Claude Code (CLI)
 
 Use the following command to add the server:
@@ -243,13 +238,4 @@ uv run ruff check .
 - **src/services/browser.py**: Browser service managing Playwright instances
 - **.env**: Environment variables configuration file
 - **.env.example**: Example configuration file with all available options
-
-## Security Considerations
-
-⚠️ **WARNING**: The stealth features are intended for legitimate testing and educational purposes only. Users are responsible for:
-
-- Complying with all applicable laws and regulations
-- Respecting website terms of service
-- Using the tool ethically and responsibly
-- Not using it for unauthorized data scraping or malicious purposes
 
