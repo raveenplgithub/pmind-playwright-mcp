@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pmind-playwright-mcp"
+version = "0.1.0"
+description = "PMIND Playwright MCP - Browser automation server for Model Context Protocol using Playwright"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+    { name = "Todd Wolven", email = "twolven@neotitanllc.com" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.10.4",
+    "playwright>=1.40.0",
+    "playwright-stealth>=1.0.6",
+    "pydantic>=2.11.7",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+pmind-playwright-mcp = "src.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
