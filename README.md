@@ -123,59 +123,13 @@ Once configured, you can start using the Playwright MCP server through your clie
 
 ### Available Tools
 
-#### playwright_navigate
-Navigate to a URL with optional device emulation and video recording.
-
-Parameters:
-- `url` (required): The URL to navigate to
-- `timeout` (optional): Navigation timeout in milliseconds
-- `mobile` (optional): Enable mobile mode (uses iPhone 13 by default)
-- `device` (optional): Specific device to emulate (e.g., 'iPhone 13', 'Pixel 5')
-- `record_video` (optional): Start/continue video recording of the browser session
-
-#### playwright_screenshot
-Capture screenshots of the page or specific elements (automatically saved to `~/.pmind-playwright-mcp/screenshots`).
-
-Parameters:
-- `name` (required): Name for the screenshot
-- `selector` (optional): CSS selector for element to screenshot
-- `full_page` (optional): Capture full scrollable page
-- `timeout` (optional): Timeout in milliseconds for finding elements
-
-#### playwright_click
-Click elements on the page.
-
-Parameters:
-- `selector` (required): CSS selector for element to click
-- `timeout` (optional): Timeout in milliseconds
-
-#### playwright_fill
-Fill input fields with text.
-
-Parameters:
-- `selector` (required): CSS selector for input field
-- `value` (required): Value to fill
-- `timeout` (optional): Timeout in milliseconds
-
-#### playwright_evaluate
-Execute JavaScript in the browser context.
-
-Parameters:
-- `script` (required): JavaScript code to execute
-- `timeout` (optional): Timeout in milliseconds
-
-#### playwright_stop_recording
-Stop recording and save the video to disk (saved to `~/.pmind-playwright-mcp/videos`).
-
-Parameters:
-- `session_name` (required): Name for the video session
-
-Note: This will close the current browser context. You'll need to navigate again after stopping.
-
-#### playwright_list_videos
-List all saved video recordings.
-
-Returns a list of all video recordings saved during the current session.
+- **playwright_navigate** - Navigate to URLs with optional device emulation and video recording
+- **playwright_screenshot** - Capture screenshots of pages or specific elements
+- **playwright_click** - Click elements on the page
+- **playwright_fill** - Fill input fields with text
+- **playwright_evaluate** - Execute JavaScript in the browser context
+- **playwright_stop_recording** - Stop and save video recordings
+- **playwright_list_videos** - List all saved video recordings
 
 ### Video Recording Example
 
